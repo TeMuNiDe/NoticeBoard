@@ -2,6 +2,9 @@
 Official App of JNTUA College of Engineering,Anantapur
 
 ###Description
-1. This was my first Project ie, Published Android app.
-2. It was too complicated for a beginner like me,but as i went along, pieces began falling into place.
-3. 
+This app acts as a means of communication between administration and the students along with faculty.
+
+Here is the Link to Google Play Store
+
+Find more about it 
+https://play.google.com/store/apps/details?id=in.ac.jntuace.noticeboard&hl=en
