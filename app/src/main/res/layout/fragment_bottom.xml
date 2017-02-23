@@ -1,0 +1,161 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.ac.jntuace.noticeboard.BottomFragment"
+    android:id="@+id/setup_bottom_constraint"
+    android:background="@color/colorPrimary">
+    <TextView
+        android:id="@+id/select_origin_bottom"
+        android:text="Staff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="#ffffff"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0"
+        android:textSize="50sp" />
+
+    <RadioGroup
+            android:layout_width="0dp"
+            android:id="@+id/choice_department"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp"
+            android:foregroundGravity="center"
+            android:visibility="gone"
+        android:gravity="top"
+        android:textColor="#ffffff">
+            <RadioButton
+                android:buttonTint="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/engineering_civil"
+                android:text="Civil Engineering"
+                android:textColor="#ffffff"
+                 android:checked="true"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/engineering_eee"
+                android:buttonTint="#ffffff"
+                android:textColor="#ffffff"
+                android:text="Electrical Engineering"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#ffffff"
+                android:id="@+id/engineering_mech"
+                android:textColor="#ffffff"
+                android:text="Mechanical Engineering"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/engineering_ece"
+                android:buttonTint="#ffffff"
+                android:textColor="#ffffff"
+                android:text="Electronics And Communications Engineering"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/engineering_cse"
+                android:buttonTint="#ffffff"
+                android:textColor="#ffffff"
+                android:text="Computer Science Engineering"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:buttonTint="#ffffff"
+                android:layout_height="wrap_content"
+                android:id="@+id/engineering_chem"
+                android:textColor="#ffffff"
+                android:text="Chemical Engineering"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:buttonTint="#ffffff"
+                android:layout_height="wrap_content"
+                android:id="@+id/non_maths"
+                android:textColor="#ffffff"
+                android:text="Mathematics"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/non_physics"
+                android:textColor="#ffffff"
+                android:buttonTint="#ffffff"
+                android:text="Physics"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/non_chemistry"
+                android:buttonTint="#ffffff"
+                android:textColor="#ffffff"
+                android:text="Chemistry"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/non_humanities"
+                android:buttonTint="#ffffff"
+                android:textColor="#ffffff"
+                android:text="Humanities"/>
+    </RadioGroup>
+    <RadioGroup
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/choice_position"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:visibility="gone">
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/position_hod"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:text="H O D"
+            android:buttonTint="#ffffff"
+            android:checked="true"
+            android:layout_margin="18dp"/>
+
+        <RadioButton
+            android:textSize="25sp"
+            android:layout_margin="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/position_regular"
+            android:buttonTint="#ffffff"
+            android:textColor="#ffffff"
+            android:text="Regular Teaching"/>  <RadioButton
+        android:layout_width="match_parent"
+        android:textSize="25sp"
+        android:layout_margin="18dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="#ffffff"
+        android:textColor="#ffffff"
+        android:id="@+id/position_adhoc"
+        android:text="Adhoc Teaching"/>  <RadioButton
+        android:layout_width="match_parent"
+        android:layout_margin="18dp"
+        android:textSize="25sp"
+        android:layout_height="wrap_content"
+        android:buttonTint="#ffffff"
+        android:textColor="#ffffff"
+        android:id="@+id/position_non_teaching"
+        android:text="Non Teaching"/>
+    </RadioGroup>
+</android.support.constraint.ConstraintLayout>

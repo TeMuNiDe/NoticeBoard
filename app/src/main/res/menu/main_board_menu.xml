@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <!-- <item android:title="Suggestion Box"
+        android:id="@+id/suggestion_box"
+        android:icon="@android:drawable/stat_notify_chat"
+        app:showAsAction="always" />-->
+<item
+    android:id="@+id/rate_us"
+    android:title="Rate US"
+    app:showAsAction="ifRoom"
+    android:icon="@android:drawable/ic_dialog_info"></item>
+    <item android:id="@+id/mail_us"
+        android:title="Mail US"
+        app:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_dialog_email"></item>
+
+
+</menu>

@@ -1,0 +1,30 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="in.ac.jntuace.noticeboard.Navigator"
+    android:foregroundGravity="center">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/jntulogo"
+    android:id="@+id/nav_view" />
+    <fr.castorflex.android.circularprogressbar.CircularProgressBar
+
+        android:layout_gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        app:cpb_color="#FFee44"
+        app:cpb_colors="@array/gplus_colors"
+        app:cpb_rotation_speed="1.0"
+        app:cpb_sweep_speed="1.0"
+        app:cpb_stroke_width="4dp"
+        app:cpb_min_sweep_angle="10"
+        app:cpb_max_sweep_angle="300"
+
+        android:visibility="visible"
+        android:id="@+id/nav_progress" />
+</FrameLayout>

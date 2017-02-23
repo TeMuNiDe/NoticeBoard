@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">JNTUACEA</string>
+    <string name="title_activity_notice_board">Notice Board</string>
+    <string name="title_activity_setup">Setup</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_navigator">Navigator</string>
+    <string name="header_html"><![CDATA[<html><head><meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\"/><link rel=\"stylesheet\" href=\"bootstrap.css\"/><script src=\"jquery.js\"><script src=\"bootstrap.js\"></script></head><body>]]></string>
+    <string name="done_for_today">Looks like you are done for the Day...!\n\n Check back Later</string>
+</resources>

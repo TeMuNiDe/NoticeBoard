@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_setup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.ac.jntuace.noticeboard.SetupActivity"
+    android:background="#ffffff">
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="0dp"
+        android:id="@+id/setup_frame_top"
+        android:alpha="1"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread">
+
+    </android.support.v4.view.ViewPager>
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="256dp"
+        tools:layout_editor_absoluteX="0dp" />
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_bottom"
+        app:layout_constraintGuide_percent="0.75"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="383dp"
+        tools:layout_editor_absoluteX="0dp" />
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_top"
+        app:layout_constraintGuide_percent="0.25"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="128dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/overlay"
+        app:layout_constraintBottom_toBottomOf="@id/activity_setup"
+        app:layout_constraintTop_toTopOf="@id/activity_setup"
+        app:layout_constraintRight_toRightOf="@id/activity_setup"
+        app:layout_constraintLeft_toLeftOf="@id/activity_setup"
+        android:visibility="gone"
+        android:background="#000000"
+        android:alpha="1" />
+
+
+    <TextView
+        android:text="Please wait.. Almost done.."
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/top_loading"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@id/activity_setup"
+        app:layout_constraintRight_toRightOf="@id/activity_setup"
+        app:layout_constraintLeft_toLeftOf="@id/activity_setup"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:visibility="gone"/>
+
+    <fr.castorflex.android.circularprogressbar.CircularProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        app:cpb_color="#FFee44"
+        app:cpb_colors="@array/gplus_colors"
+        app:cpb_rotation_speed="1.0"
+        app:cpb_sweep_speed="1.0"
+        app:cpb_stroke_width="4dp"
+        app:cpb_min_sweep_angle="10"
+        app:cpb_max_sweep_angle="300"
+        app:layout_constraintLeft_toLeftOf="@id/activity_setup"
+        app:layout_constraintRight_toRightOf="@id/activity_setup"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        app:layout_constraintBottom_toBottomOf="@id/activity_setup"
+        app:cpbStyle="@style/CircularProgressBar"
+        android:visibility="gone"
+        android:id="@+id/cpb" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/top_message"
+        app:layout_constraintLeft_toLeftOf="@+id/setup_frame_bottom"
+        app:layout_constraintRight_toRightOf="@+id/setup_frame_bottom"
+        app:layout_constraintTop_toTopOf="@+id/setup_frame_top"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_top"
+        android:visibility="gone"
+        android:background="@color/colorAccent"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+        android:alpha="1"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/bottom_message"
+        app:layout_constraintBottom_toBottomOf="@+id/setup_frame_bottom"
+        app:layout_constraintLeft_toLeftOf="@+id/setup_frame_bottom"
+        app:layout_constraintRight_toRightOf="@+id/setup_frame_bottom"
+        android:visibility="gone"
+        android:background="@color/colorPrimary"
+        android:alpha="1"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="@+id/guideline_bottom" />
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="0dp"
+        android:id="@+id/setup_frame_bottom"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/setup_frame_top"
+        app:layout_constraintRight_toRightOf="@+id/setup_frame_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:alpha="1"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_top"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top">
+
+    </android.support.v4.view.ViewPager>
+    <ImageView
+        android:layout_width="0dp"
+        android:src="@color/colorAccent"
+        android:id="@+id/bottom_cover"
+        app:layout_constraintRight_toRightOf="@id/activity_setup"
+        app:layout_constraintLeft_toLeftOf="@id/activity_setup"
+        android:visibility="gone"
+        android:alpha="1"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_bottom"
+        app:layout_constraintTop_toBottomOf="@+id/guideline" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:src="@color/colorPrimary"
+        android:id="@+id/top_cover"
+        android:alpha="1"
+        app:layout_constraintLeft_toLeftOf="@id/activity_setup"
+        app:layout_constraintRight_toRightOf="@+id/setup_frame_bottom"
+        android:visibility="gone"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_top" />
+
+
+    <TextView
+        android:text="Staff"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
+        android:alpha="1"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        app:layout_constraintLeft_toLeftOf="@id/activity_setup"
+        app:layout_constraintBottom_toBottomOf="@id/activity_setup"
+        app:layout_constraintRight_toRightOf="@id/activity_setup"
+        android:gravity="center"
+        android:id="@+id/text_frame_bottom" />
+
+    <Button
+        android:text="Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/next"
+        android:textSize="22sp"
+        app:layout_constraintRight_toRightOf="@+id/setup_frame_bottom"
+        app:layout_constraintBottom_toBottomOf="@+id/setup_frame_bottom"
+        android:visibility="gone"
+        android:background="@drawable/raised_button_background"
+        android:elevation="5dp"
+        android:textColor="#ffffff"
+        />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,43 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:id="@+id/top_fragment_constraint"
+    tools:context="in.ac.jntuace.noticeboard.FragmentTop">
+
+
+    <TextView
+        android:text="Student"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/select_origin_top"
+        app:layout_constraintLeft_toLeftOf="@id/top_fragment_constraint"
+        app:layout_constraintTop_toTopOf="@id/top_fragment_constraint"
+        app:layout_constraintBottom_toBottomOf="@id/top_fragment_constraint"
+        app:layout_constraintRight_toRightOf="@id/top_fragment_constraint"
+        android:textSize="50sp"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+        android:gravity="center" />
+    <EditText
+
+        android:layout_width="wrap_content"
+        android:hint="Enter Your Admission Number"
+        android:layout_height="40dp"
+        android:lines="1"
+        android:textColor="@color/colorPrimary"
+        android:padding="7dp"
+        android:maxLength="10"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="@id/top_fragment_constraint"
+        app:layout_constraintTop_toTopOf="@id/top_fragment_constraint"
+        app:layout_constraintBottom_toBottomOf="@id/top_fragment_constraint"
+        app:layout_constraintRight_toRightOf="@id/top_fragment_constraint"
+        android:id="@+id/text_input_top"
+        android:gravity="center"
+        android:background="@drawable/text_border"
+        android:visibility="gone"
+        />
+</android.support.constraint.ConstraintLayout>
