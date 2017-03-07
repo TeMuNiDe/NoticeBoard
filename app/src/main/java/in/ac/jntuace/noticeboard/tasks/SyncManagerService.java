@@ -51,7 +51,11 @@ public class SyncManagerService extends IntentService {
             List<BoardItem> newItems = handlerInterface.sync();
             bridge.insertItem(newItems);
             int count = 0;
+
+
+
             for(BoardItem item:newItems) {
+                sendBroadcast(new Intent(NoticeBoard.ACTION_MESSAGE).putExtra("boarditem",item));
                 Intent launcher = new Intent(getApplicationContext(), DetailedView.class);
                 launcher.putExtra("board_item",item);
                 TaskStackBuilder builder = TaskStackBuilder.create(this);

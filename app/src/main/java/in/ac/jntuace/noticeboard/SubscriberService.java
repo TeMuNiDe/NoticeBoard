@@ -6,6 +6,7 @@ import android.os.IBinder;
 import in.ac.jntuace.noticeboard.tasks.PreferenceManager;
 import android.util.Log;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.crash.FirebaseCrash;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -39,7 +40,7 @@ public class SubscriberService extends FirebaseInstanceIdService {
             try {
                 Response response = client.newCall(request).execute();
                 String responses = response.body().string();
-                Log.d("response", responses);
+               // Log.d("response", responses);
                 if (responses.equals("1")) {
                 }
             } catch (Exception e) {
@@ -48,6 +49,7 @@ public class SubscriberService extends FirebaseInstanceIdService {
                 } else if (e instanceof IOException) {
                     e.printStackTrace();
                 } else {
+                    FirebaseCrash.report(e);
                     e.printStackTrace();
                 }
 

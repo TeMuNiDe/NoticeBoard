@@ -1,8 +1,11 @@
 package in.ac.jntuace.noticeboard;
 
 import android.*;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.net.Uri;
@@ -36,8 +39,10 @@ import static in.ac.jntuace.noticeboard.R.styleable.RecyclerView;
 
 public class NoticeBoard extends AppCompatActivity implements MainBoardAdapter.onItemClickListener{
     DataBaseBridge bridge;
+    public   static String ACTION_MESSAGE = "MESSAGE_RECEIVED";
     List<BoardItem> boardItemsall;
     SwipeRefreshLayout layout;
+    UpdateInterface updateInterface;
     RecyclerView mainBoardList;
     MainBoardAdapter adapter;
     TextView done;
@@ -157,5 +162,35 @@ switch (item.getItemId()) {
 }
 
         return super.onOptionsItemSelected(item);
+    }
+    class UpdateInterface extends BroadcastReceiver{
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            adapter.boardItems.add(0,(BoardItem)intent.getParcelableExtra("boarditem"));
+            adapter.notifyDataSetChanged();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        if(updateInterface!=null){
+            unregisterReceiver(updateInterface);
+        }
+        super.onPause();
+
+    }
+
+    @Override
+    protected void onResume() {
+
+        if(updateInterface==null){
+            updateInterface = new UpdateInterface();
+
+        }
+        IntentFilter filter = new IntentFilter(ACTION_MESSAGE);
+        registerReceiver(updateInterface,filter);
+        super.onResume();
     }
 }
