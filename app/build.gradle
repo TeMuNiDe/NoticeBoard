@@ -7,7 +7,7 @@ android {
         applicationId "in.ac.jntuace.noticeboard"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 14
+        versionCode 15
         versionName "4.0"
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
