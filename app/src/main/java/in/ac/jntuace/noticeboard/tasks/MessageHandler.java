@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.util.Log;
 
+import com.google.firebase.crash.FirebaseCrash;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -17,17 +18,27 @@ public class MessageHandler extends FirebaseMessagingService{
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-        Map<String,String> data  = remoteMessage.getData();
-        bridge = new DataBaseBridge(getApplicationContext());
-        Log.d("message reccieved",data.get("operation"));
-switch (data.get("operation")){
-    case "insert":insertRequest(data.get("id"));break;
-    case "delete":deleteRequest(data.get("id"));break;
-    case "update":setLatestVersion(data.get("version"));break;
-}
-
+        try {
+            Map<String, String> data = remoteMessage.getData();
+            bridge = new DataBaseBridge(getApplicationContext());
+            Log.d("message reccieved", data.get("operation"));
+            switch (data.get("operation")) {
+                case "insert":
+                    insertRequest(data.get("id"));
+                    break;
+                case "delete":
+                    deleteRequest(data.get("id"));
+                    break;
+                case "update":
+                    setLatestVersion(data.get("version"));
+                    break;
+            }
+        }catch (Exception e){
+            FirebaseCrash.report(e);
+        }
     }
     public void insertRequest(String id){
+
 bridge.enQueue(id);
         startService(new Intent(getApplicationContext(),SyncManagerService.class));
     }

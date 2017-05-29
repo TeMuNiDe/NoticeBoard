@@ -6,3 +6,6 @@
 .DS_Store
 /build
 /captures
+*.apk
+app/libs/okhttp-3.4.1.jar
+*.jar

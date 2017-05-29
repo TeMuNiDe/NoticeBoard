@@ -80,7 +80,7 @@ done = (TextView)findViewById(R.id.done_for_today) ;
 
 
         AlertDialog.Builder builder = new AlertDialog.Builder(NoticeBoard.this);
-        builder.setMessage("New Update Availabe").setPositiveButton("Update Now", new DialogInterface.OnClickListener() {
+        builder.setMessage("New Update Available").setPositiveButton("Update Now", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Intent i = new Intent(Intent.ACTION_VIEW);

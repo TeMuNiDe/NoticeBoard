@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '24.0.1'
+    buildToolsVersion '25.0.0'
     defaultConfig {
         applicationId "in.ac.jntuace.noticeboard"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 15
+        versionCode 18
         versionName "4.0"
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
